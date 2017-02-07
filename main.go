@@ -67,7 +67,7 @@ func (i *irc) send(msg string) {
 
 func (i *irc) say(channel, msg string) {
 	fmt.Printf("sending #%s : %s\n", channel, msg)
-	i.send(fmt.Sprintf("PRIVMSG %s:%s", channel, msg))
+	i.send(fmt.Sprintf("PRIVMSG #%s :%s", channel, msg))
 }
 
 func (i *irc) read() {
